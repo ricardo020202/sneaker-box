@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./css/img/sb.jpg" type="image/x-icon">
+    <title>Sneaker Box</title>
+</head>
+
+<body>
+    <div id="pageContainer">
+        <div class="container-fluid headerArea">
+            <nav class="navbar fixed-top black navbar-expand-lg">
+                <a class="navbar-brand justify-content-center" href="index.html">
+                    <img src="./css/img/logo_2.png" class="" alt="" id="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation" onclick="myFunction()">
+                    <span class="navbar-toggler-icon"><img src="./css/img/menu-icon.png" alt="" id="mini"></span>
+                </button>
+                <ul class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <li class="col navigation">
+                        <li class="col">
+                            <div class="dropdown">
+                                <button class="btn btn-transparent dropdown-toggle text-white" data-display="static"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Marcas
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#new">Nuevos Lanzamientos</a>
+                                    <a class="dropdown-item" href="nike.html">Nike</a>
+                                    <a class="dropdown-item" href="adidas.html">Adidas</a>
+                                    <a class="dropdown-item" href="jordan.html">Jordan</a>
+                                    <a class="dropdown-item" href="vans.html">Vans</a>
+                                    <a class="dropdown-item" href="yeezy.html">Yeezy</a>
+                                    <a class="dropdown-item" href="puma.html">Puma</a>
+                                    <a class="dropdown-item" href="gucci.html">Gucci</a>
+                                    <a class="dropdown-item" href="converse.html">Converse</a>
+                                    <a class="dropdown-item" href="reebok.html">Reebok</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col">
+                            <div class="dropdown">
+                                <button class="btn btn-transparent dropdown-toggle text-white" data-display="static"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Hombre
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#calzadoH">Calzado</a>
+                                    <a class="dropdown-item" href="#ropaH">Ropa</a>
+                                    <a class="dropdown-item" href="#accesoriosH">Accesorios</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col">
+                            <div class="dropdown">
+                                <button class="btn btn-transparent dropdown-toggle text-white" data-display="static"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Mujer
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#calzadoM">Calzado</a>
+                                    <a class="dropdown-item" href="#ropaM">Ropa</a>
+                                    <a class="dropdown-item" href="#accesoriosM">Accesorios</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col">
+                            <div class="dropdown">
+                                <button class="btn btn-transparent dropdown-toggle text-white" data-display="static"
+                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Contacto
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#email">Email</a>
+                                    <a class="dropdown-item" href="#tel">Telefono</a>
+                                    <a class="dropdown-item" href="#redesSociales">Redes sociales</a>
+                                </div>
+                            </div>
+                        </li>
+                    </li>
+
+                    <li class="col-sm items">
+                        <div class="col-sm bg-transparent">
+                            <form class="form-inline text-white">
+                                <input class="form-control mr-sm-2 bg-transparent" type="search" placeholder="Search..."
+                                    aria-label="Search">
+                            </form>
+                        </div>
+                        <div class="col">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-transparent btn-sm" data-toggle="modal"
+                                data-target="#exampleModal">
+                                <img src="./css/img/user-management-1e8bf7cb3c23335e2af745696a1e3f91.png" alt=""
+                                    id="mini">
+                            </button>
+
+
+                        </div>
+                        <div class="col">
+                            <img src="./css/img/cart_grey.jpg" id="mini">
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <form class="logIn">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share
+                                    your
+                                    email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row background">
+                <div class="bd-carousel">
+                    <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselCaptions" data-slide-to="1"></li>
+                            <li data-target="#carouselCaptions" data-slide-to="2"></li>
+                            <li data-target="#carouselCaptions" data-slide-to="3"></li>
+                            <li data-target="#carouselCaptions" data-slide-to="4"></li>
+                            <li data-target="#carouselCaptions" data-slide-to="5"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <video src="./css/img/video.mp4" class="d-block w-100" autoplay loop muted></video>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Adidas Ultra Boost</h3>
+                                    <p><button type="button" class="btn btn-outline-light">Ver Mas</button></p>
+                                </div>
+
+                            </div>
+                            <div class="carousel-item ch">
+                                <img src="./css/img/mnz-v13tnV6D9lw-unsplash.jpg" class="d-block w-100" class="img-fluid"
+                                    alt="Responsive image">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Jordan Retro 1 Flyknit</h3>
+                                    <p><button type="button" class="btn btn-outline-light">Ver Mas</button></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ch">
+                                <img src="./css/img/pexels-photo-833052.jpeg" class="d-block w-100" class="img-fluid"
+                                    alt="Responsive image">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Lo Mejor En Streetwear</h3>
+                                    <p><button type="button" class="btn btn-outline-light">Ver Mas</button></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ch">
+                                <img src="./css/img/alex-haney-TcNyK8ly1jE-unsplash.jpg" class="d-block w-100" class="img-fluid"
+                                    alt="Responsive image">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Bape x Lakers Jersey</h3>
+                                    <p><button type="button" class="btn btn-outline-light">Ver Mas</button></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ch">
+                                <img src="./css/img/bence-halmosi-fcvMfywS35k-unsplash.jpg" class="d-block w-100" class="img-fluid"
+                                    alt="Responsive image">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Jordan Retro 1 Top 3</h3>
+                                    <p><button type="button" class="btn btn-outline-light">Ver Mas</button></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ch">
+                                <img src="./css/img/pexels-photo-3067850.jpeg" class="d-block w-100" class="img-fluid"
+                                    alt="Responsive image">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Yeezy Black Core</h3>
+                                    <p><button type="button" class="btn btn-outline-light">Ver Mas</button></p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row title justify-content-center align-content-center" id="new">
+                <h4>Nuevos lanzamientos</h4>
+            </div>
+            <div class="row newReleasesImg">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/images/https___hypebeast.com_image_2019_07_best-sneaker-releases-july-2019-week-4-11.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">PSG x Air Jordan 6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/images/sacai-nike-blazer-1-750x526.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Sacai x Nike Blazer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/images/Kith-x-Levis-Salt-Bleach-AOP-Crossbody-Bag-Light-Blue.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Kith x Levi's Salt Bleach AOP Crossbody Bag Light Blue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row newReleasesImg">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/images/Bape-x-Mitchell-Ness-Lakers-Warm-Up-Jacket-Purple.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">BAPE x Mitchell & Ness Lakers Warm Up Jacket Purple</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/images/Supreme-Afternoon-Camp-Cap-Multicolor.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Supreme Afternoon Camp Cap Multicolor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/images/yeezy.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Yeezy 350 V2 Butter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <a href="nuevos_lanzamientos.html"><button type="button" class="btn btn-dark d-none d-sm-block">Ver Todo</button></a>
+            </div>
+            <div class="row justify-content-center title" id="hombre">
+                <h4>Hombre</h4>
+            </div>
+            <div class="row justify-content-start title" id="accesoriosH">
+                <h5>Accesorios</h5>
+            </div>
+            <div class="row hImg">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/OFF-WHITE-Industrial-Belt-Yellow-Black.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">OFF-WHITE Industrial Belt Yellow/Black</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/bapeBag.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Bape Backpack</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/amgGorra.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">PUMA Gorra AMG Petronas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-start title" id="calzadoH">
+                <h5>Calzado</h5>
+            </div>
+            <div class="row hImg">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/tenis-nike-kyrie-5-patricio-estrella-D_NQ_NP_898403-MLM31864849098_082019-F.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Kyrie 5 x Sponge Bob</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/air-jordan-1-unc-off-white-D_NQ_NP_658830-MLM27719283302_072018-F.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Jordan 1 x Off White</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/travis-scott-air-jordan-6-CN1084-200-1-1-1000x562.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Jordan 6 x Travis Scott</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-start title" id="ropaH">
+                <h5>Ropa</h5>
+            </div>
+            <div class="row hImg">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/Bape-x-PSG-Shark-Full-Zip-Hoodie-Navy.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Bape x PSG Shark Hoodie Navy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/OFF-WHITE-Flamed-Bart-T-Shirt-White.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Off White Flamed Bart T-Shirt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/supreme-north-face-tnf-trans-antartica-goretext-jacket-red-1-900x900.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Supreme x Nike</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <a href="hombre.html"><button type="button" class="btn btn-dark d-none d-sm-block">Ver Todo</button></a>
+            </div>
+            <div class="row justify-content-center title" id="mujer">
+                <h4>Mujer</h4>
+            </div>
+            <div class="row justify-content-start title" id="accesoriosM">
+                <h5>Accesorios</h5>
+            </div>
+            <div class="row mImg">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/bolsa supreme.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Bolsa Supreme x Louis Vuitton</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/gorra-nike-futura-true-pink-mujer-D_NQ_NP_698722-MLA28255507863_092018-F.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Nike Gorra Futura True Pink</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/cinturon gucci.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Cinturon Gucci</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-start title" id="calzadoM">
+                <h5>Calzado</h5>
+            </div>
+            <div class="row mImg">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/Reebok-Women-s-Guresu-2-0-Shoes-Running-Shoes-Black-White-SS19-CN5050UK-7-5.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Reebok Women's Guresu 2.0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/Chuck_Taylor_All_Star_70_PLAY_COMME_des_GARCONS_-_Black_high_top_33235.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Converse Chuck Taylor All Star’70 Play Comme des Garçons</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/jordanW.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Jordan Retro 1 High OG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-start title" id="ropaM">
+                <h5>Ropa</h5>
+            </div>
+            <div class="row mImg">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/sudadera-mujer-vans-q1-pv19-89148-envio-gratis-D_NQ_NP_939784-MLM29979717231_042019-Q.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Vans Hoodie WMNS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/jordan-playera-dama-y-caballero-D_NQ_NP_953915-MLM31232929496_062019-Q.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Jordan Shirt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./css/img/jordanxpsg.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Jordan x PSG Shirt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <a href="mujer.html"><button type="button" class="btn btn-dark d-none d-sm-block">Ver Todo</button></a>
+            </div>
+            <div class="row justify-content-center title" id="marcas">
+                <h4>Marcas</h4>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="./css/img/logo_nike_principal.jpg" alt="" id="imgSize">
+                                    </div>
+                                    <div class="col">
+                                        <img src="./css/img/Adidas-logo.png" alt="" id="imgSize">
+                                    </div>
+                                    <div class="col">
+                                        <img src="./css/img/vans.png" alt="" id="imgSize" id="imgSize">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="./css/img/jordanLogo.jpg" alt="" id="imgSize">
+                                    </div>
+                                    <div class="col">
+                                        <img src="./css/img/yeezy.jpg" alt="" id="imgSize">
+                                    </div>
+                                    <div class="col">
+                                        <img src="./css/img/PUMA-símbolo.png" alt="" id="imgSize" id="imgSize">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="./css/img/Converse-logo.png" alt="" id="imgSize">
+                                    </div>
+                                    <div class="col">
+                                        <img src="./css/img/Reebok-símbolo.png" alt="" id="imgSize">
+                                    </div>
+                                    <div class="col">
+                                        <img src="./css/img/gucci.png" alt="" id="imgSize" id="imgSize">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center title">
+                <h4>Galeria</h4>
+            </div>
+            <div class="container bg mb-5">
+                <div class="row no-gutters">
+                    <div class="col-25">
+                        <img src="./css/img/pexels-photo-1698359.jpeg" alt="" id="img2">
+                    </div>
+                    <div class="col">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <img src="./css/img/pexels-photo-2065695.jpeg" alt="" id="img3">
+                            </div>
+                            <div class="col">
+                                <img src="./css/img/pexels-photo-1018484.jpeg" alt="" id="img4">
+                            </div>
+                            <div class="col">
+                                <img src="./css/img/pexels-photo-2700537.jpeg" alt="" id="img3">
+                            </div>
+                            <div class="col">
+                                <img src="./css/img/pexels-photo-2894637.jpeg" alt="" id="img4">
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <img src="./css/img/pexels-photo-1032110.jpeg" alt="" id="img3">
+                            </div>
+                            <div class="col">
+                                <img src="./css/img/pexels-photo-179908.jpeg" alt="" id="img3">
+                            </div>
+                            <div class="col">
+                                <img src="./css/img/pexels-photo-1230679.jpeg" alt="" id="img4">
+                            </div>
+                            <div class="col">
+                                <img src="./css/img/pexels-photo-1822845.jpeg" alt="" id="img3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container-fluid footer">
+                <div class="row">
+                    <div class="col ">
+                        <img src="./css/img/logo_2.png" class="img-fluid d-none d-sm-block" alt="Responsive image"
+                            id="logo">
+                    </div>
+                    <div class="col categorias text-white">
+                        <p>
+                            Buscar por
+                            <p><a href="#marcas">Marcas</a></p>
+                            <p><a href="#hombre">Hombre</a></p>
+                            <p><a href="#mujer">Mujer</a></p>
+                            <p><a href="#nuevosLanzamientos">Nuevos lanzamientos</a></p>
+                        </p>
+                    </div>
+                    <div class="col terminos text-white">
+                        <p>
+                            Terminos
+                            <p><a href="#Devoluciones">Devoluciones</a></p>
+                            <p><a href="#Privacidad">Privacidad</a></p>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <div class="row items" id="redesSociales">
+                            <div class="col">
+                                <img src="./css/img/facebook.png" class="img-fluid" alt="Responsive image" id="mini">
+                            </div>
+                            <div class="col">
+                                <img src="./css/img/instagram.png" class="img-fluid" alt="Responsive image" id="ig">
+                            </div>
+                            <div class="col">
+                                <img src="./css/img/twitter.png" class="img-fluid" alt="Responsive image" id="mini">
+                            </div>
+                        </div>
+                        <div class="row text-white justify-content-start mt-5" id="email">
+                            <p>
+                                Email: contacto@sneaker_box.com
+                            </p>
+                        </div>
+                        <div class="row text-white justify-content-start" id="tel">
+                            <p>
+                                Tel: (442) 45 64 37
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="zNavBar.js"></script>
+</body>
+
+</html>

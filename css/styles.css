@@ -1,0 +1,94 @@
+.background{
+    margin: 2px;
+    position: relative;
+}
+.over{
+    position: absolute; top:30px; left:170px;
+   
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+}
+.footer{
+    height: 400px;
+    background-color: rgb(27, 25, 25);
+    padding: 100px;
+}
+#logo{
+    height: 2cm;
+    width: 5cm;
+}
+#mini{
+    height: 28px;
+    width: 28px;
+}
+#ig{
+    height: 45px;
+    width: 45px;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+}
+.logIn{
+    margin: 15px;
+}
+.title{
+    display: flex;
+    align-content: center;
+    height: 150px;
+}
+.height{
+    height: 400px;
+}
+#imgSize{
+    height: 150px;
+    width: 250px;
+}
+.orientation{
+    display: flex;
+    flex-direction: row;
+}
+#img2{
+    height: 300px;
+    width: 250px;
+
+}
+#img3{
+    height: 150px;
+    width: 150px;
+
+}
+#img4{
+    height: 150px;
+    width: 250px;
+
+}
+.bg{
+    background-color: black;
+}
+.black{
+    position:fixed;
+    top:0;
+    background:none;
+    width:100%;
+    height:100px;
+  } 
+
+.blue{
+    position:fixed;
+    top:0;
+    background:blue;
+    width:100%;
+    height:100px;
+    
+}
+li {
+    list-style-type: none;
+}
